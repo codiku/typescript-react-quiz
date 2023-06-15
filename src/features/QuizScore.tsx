@@ -21,10 +21,10 @@ export function QuizScore(p: Props) {
   return (
     <>
       <Flex direction={"column"} alignItems={"center"}>
-        <Heading as="h1" fontSize={"3xl"} mt={200} mb={5}>
+        <Heading as="h1" fontSize={"3xl"}>
           Score
         </Heading>
-        <Heading fontSize={"xl"}>
+        <Heading fontSize={"xl"} mt={5}>
           {rightAnswersCount}/{p.history.length}
         </Heading>
         <Text fontWeight={"bold"} mt={20}>

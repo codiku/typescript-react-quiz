@@ -63,7 +63,7 @@ export function QuizPlay(p: Props) {
 
   const progressBar = () => {
     return (
-      <HStack mt={50}>
+      <HStack>
         {p.questions.map((_, i) => {
           return (
             <Box

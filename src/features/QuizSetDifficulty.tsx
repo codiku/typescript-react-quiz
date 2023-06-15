@@ -29,7 +29,7 @@ export function QuizSetDifficulty(p: Props) {
   return (
     <>
       <Flex direction={"column"} alignItems={"center"}>
-        <Heading as="h1" fontSize={"3xl"} mt={200} mb={20}>
+        <Heading as="h1" fontSize={"3xl"} mb={20}>
           Which difficulty?
         </Heading>
         <RadioGroup

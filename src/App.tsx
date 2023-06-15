@@ -8,7 +8,7 @@ import {
   QuizType,
   Steps,
 } from "./types/quiz.type";
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import { QuizSetQuestionsQty } from "./features/QuizSetQuestionsQty";
 import { QuizSetCategory } from "./features/QuizSetCategory";
 import { QuizPlay } from "./features/QuizPlay";
@@ -16,7 +16,7 @@ import BubbleImg from "./assets/bubble.png";
 import { QuizAPI } from "./api/quiz-api";
 import { QuizSetDifficulty } from "./features/QuizSetDifficulty";
 import { QuizScore } from "./features/QuizScore";
-
+import logoImg from "./assets/logo.png";
 export default function App() {
   const [quizCategories, setQuizCategories] = useState<QuizCategory[]>([]);
   const [quizParams, setQuizParams] = useState<FetchQuizParams>({
@@ -41,7 +41,7 @@ export default function App() {
 
   const header = (
     <Flex justify="center">
-      <Heading size="2xl">Kooiz</Heading>
+      <Image h={"24"} src={logoImg} />
     </Flex>
   );
 
@@ -119,9 +119,9 @@ export default function App() {
         zIndex={-1}
         position="absolute"
         right={-120}
-        top={200}
+        top={100}
       />
-      {renderStep()}
+      <Box mt={100}>{renderStep()}</Box>
     </Box>
   );
 }
